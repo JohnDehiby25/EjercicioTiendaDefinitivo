@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo;
+import javax.swing.*;
 
-public class Libro extends Producto {
+public class Libro extends Producto implements IDescripcion{
     
     private String titulo;
     private String autor;
@@ -37,6 +38,13 @@ public class Libro extends Producto {
 
     public void setNumeroPaginas(int numeroPaginas) {
         this.numeroPaginas = numeroPaginas;
+    }
+
+    public void mostrarDescripcionDetallada() {
+        JOptionPane.showMessageDialog(null,
+        "El libro tiene de título: " + this.titulo + "\n" +
+        "Autor: " + this.autor + "\n" +
+        "Numero de Paginas: " + this.numeroPaginas);
     }
 
     

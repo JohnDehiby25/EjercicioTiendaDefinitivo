@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo;
 
-public class Vestimenta extends Producto{
+import javax.swing.JOptionPane;
+
+public class Vestimenta extends Producto implements IDescripcion{
     
     private String talla;
     private String color;
@@ -36,6 +38,14 @@ public class Vestimenta extends Producto{
 
     public void setTipoPrenda(TipoPrenda tipoPrenda) {
         this.tipoPrenda = tipoPrenda;
+    }
+    public void mostrarDescripcionDetallada(){
+
+        JOptionPane.showMessageDialog(null,
+        "La vestimenta es de talla: " + this.talla +
+        " tiene un color: " + this.color + " y el precio es de: " + 
+        this.precio + " pesos"
+        );
     }
 
     
